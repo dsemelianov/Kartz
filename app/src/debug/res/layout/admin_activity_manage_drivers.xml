@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@android:color/white"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true">
+
+    <RelativeLayout
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentTop="true">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="Manage drivers"
+            android:textStyle="bold"
+            android:textColor="@android:color/black"
+            android:textSize="18dp"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/add_driver"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_below="@id/title">
+
+        <EditText
+            android:id="@+id/phone_number_field"
+            android:layout_width="175dp"
+            android:layout_height="50dp"
+            android:layout_centerInParent="true"
+            android:textColorHint="@android:color/darker_gray"
+            android:textColor="@android:color/black"
+            android:textSize="13sp"
+            android:hint="Enter driver's phone #"
+            android:gravity="center"
+            android:background="@drawable/button_empty"/>
+
+        <ImageView
+            android:id="@+id/button_add"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="20dp"
+            android:src="@drawable/add_button"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@android:color/black"
+            android:layout_alignParentBottom="true"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/footer"
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:layout_alignParentBottom="true">
+
+        <Button
+            android:id="@+id/button_save"
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_gravity="bottom"
+            android:background="@drawable/button_primary"
+            android:text="Finish"
+            android:textColor="@android:color/white"
+            android:textSize="13sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@android:color/black"
+            android:layout_alignParentTop="true"/>
+
+    </RelativeLayout>
+
+    <ListView
+        android:id="@+id/list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/footer"
+        android:layout_below="@id/add_driver">
+    </ListView>
+
+</RelativeLayout>

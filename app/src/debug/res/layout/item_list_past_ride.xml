@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/transparent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/body"
+        android:layout_width="fill_parent"
+        android:layout_height="100dp" >
+
+        <RelativeLayout
+            android:id="@+id/side_banner"
+            android:layout_width="10dp"
+            android:layout_height="fill_parent"
+            android:layout_alignParentLeft="true"
+            android:background="@color/colorPrimary" />
+
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_toRightOf="@+id/side_banner"
+            android:layout_marginLeft="20dp"
+            android:gravity="bottom"
+            android:textColor="#000000"
+            android:textSize="14sp"
+            android:text="Chris Hogue" />
+
+        <TextView
+            android:id="@+id/date"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="20dp"
+            android:gravity="bottom"
+            android:textColor="#000000"
+            android:textSize="10sp"
+            android:text="March 4th at 7:00 AM" />
+
+        <RelativeLayout
+            android:id="@+id/price_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_below="@id/name"
+            android:layout_alignLeft="@id/name"
+            android:layout_marginRight="25dp">
+
+            <ImageView
+                android:id="@+id/price_icon"
+                android:layout_width="10dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:gravity="center"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="5dp"
+                android:src="@drawable/passengers_icon" />
+
+            <TextView
+                android:id="@+id/price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/price_icon"
+                android:gravity="center"
+                android:layout_centerVertical="true"
+                android:textColor="#000000"
+                android:textSize="10sp"
+                android:text="$9.00" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/payment_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_below="@id/name"
+            android:layout_toRightOf="@id/price_layout"
+            android:layout_marginRight="25dp">
+
+            <ImageView
+                android:id="@+id/payment_icon"
+                android:layout_width="12dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:gravity="center"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="5dp"
+                android:src="@drawable/payment_icon" />
+
+            <TextView
+                android:id="@+id/payment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/payment_icon"
+                android:gravity="center"
+                android:layout_centerVertical="true"
+                android:textColor="#000000"
+                android:textSize="10sp"
+                android:text="Payment successful" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</LinearLayout>

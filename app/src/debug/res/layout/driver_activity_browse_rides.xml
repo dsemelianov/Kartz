@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@android:color/white"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true">
+
+    <RelativeLayout
+        android:id="@+id/layout_active_status_container"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentTop="true">
+
+        <ProgressBar
+            android:id="@+id/loading_active_status"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_centerInParent="true"/>
+
+        <RelativeLayout
+            android:id="@+id/layout_active_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/text_toggle"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_marginRight="10dp"
+                android:textSize="12sp"
+                android:gravity="center"
+                android:textColor="@android:color/black"
+                android:text="New ride notifications are"/>
+
+            <Button
+                android:id="@+id/button_on"
+                android:layout_width="50dp"
+                android:layout_height="30dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_toRightOf="@+id/text_toggle"
+                android:layout_centerVertical="true"
+                android:background="@drawable/toggle_button_selected"
+                android:text="ON"
+                android:textColor="@color/colorAccent"
+                android:textSize="10sp"/>
+
+            <Button
+                android:id="@+id/button_off"
+                android:layout_width="50dp"
+                android:layout_height="30dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_toRightOf="@+id/button_on"
+                android:layout_centerVertical="true"
+                android:background="@drawable/toggle_button_unselected"
+                android:text="OFF"
+                android:textColor="@color/lightGray"
+                android:textSize="10sp"/>
+
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_alignParentBottom="true"
+            android:background="@android:color/darker_gray"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/layout_active_status_container">
+
+        <ListView
+            android:id="@+id/list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        </ListView>
+
+        <TextView
+            android:id="@+id/text_empty_list"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            android:textColor="@android:color/black"
+            android:layout_margin="20dp"
+            android:text="Empty list"
+            android:layout_centerInParent="true">
+        </TextView>
+
+        <ProgressBar
+            android:id="@+id/loading"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_centerInParent="true"
+            android:visibility="gone"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>

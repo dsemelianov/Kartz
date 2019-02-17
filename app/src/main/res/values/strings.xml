@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">Kartz</string>
+
+    <string name="support_email_address">support@support.com</string>
+    <string name="support_email_subject">"I have an issue to report!"</string>
+    <string name="support_email_body_first">"Hello,\n\nI had an issue using your app!\nMy ride # is: "</string>
+    <string name="support_email_body_second">"\nAnd my user # is: "</string>
+
+    <string name="dev_email_address">dsemelianov@gmail.com</string>
+    <string name="dev_email_subject">"I have an issue to report!"</string>
+    <string name="dev_email_body_first">"Hello,\n\nI am an admin for the "</string>
+    <string name="dev_email_body_second">" app, and I am having a technical issue."</string>
+
+    <string name="stripe_key">pk_test_wHuyC8ORWkllRbTE0OwIzhwW</string>
+
+    <string name="terms_url">https://goo.gl/iENs4K</string>
+
+    <string name="closed">We\'re sorry, there are currently no drivers available. Please refer to our hours of operation or check back at a later time.</string>
+
+</resources>

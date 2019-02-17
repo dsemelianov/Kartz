@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/transparent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/body"
+        android:layout_width="fill_parent"
+        android:layout_height="100dp" >
+
+        <RelativeLayout
+            android:id="@+id/side_banner"
+            android:layout_width="10dp"
+            android:layout_height="fill_parent"
+            android:layout_alignParentLeft="true"
+            android:background="@color/colorPrimary" />
+
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_toRightOf="@+id/side_banner"
+            android:layout_marginLeft="20dp"
+            android:gravity="bottom"
+            android:textColor="#000000"
+            android:textSize="14sp"
+            android:text="Chris Hogue" />
+
+        <RelativeLayout
+            android:id="@+id/distance_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_below="@id/name"
+            android:layout_alignLeft="@id/name"
+            android:layout_marginRight="25dp">
+
+            <ImageView
+                android:id="@+id/distance_icon"
+                android:layout_width="8dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:gravity="center"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="5dp"
+                android:src="@drawable/distance_icon" />
+
+            <TextView
+                android:id="@+id/distance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/distance_icon"
+                android:gravity="center"
+                android:layout_centerVertical="true"
+                android:textColor="#000000"
+                android:textSize="12sp"
+                android:text="200m" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/passenger_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_below="@id/name"
+            android:layout_toRightOf="@id/distance_layout"
+            android:layout_marginRight="25dp">
+
+            <ImageView
+                android:id="@+id/passenger_icon"
+                android:layout_width="14dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:gravity="center"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="5dp"
+                android:src="@drawable/passengers_icon" />
+
+            <TextView
+                android:id="@+id/passenger"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/passenger_icon"
+                android:gravity="center"
+                android:layout_centerVertical="true"
+                android:textColor="#000000"
+                android:textSize="12sp"
+                android:text="1 passenger" />
+
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/approve"
+            android:layout_width="30dp"
+            android:layout_height="fill_parent"
+            android:layout_alignParentRight="true"
+            android:gravity="center"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="20dp"
+            android:src="@drawable/approve" />
+
+    </RelativeLayout>
+
+</LinearLayout>

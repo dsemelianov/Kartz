@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@android:color/white"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true">
+
+    <TextView
+        android:id="@+id/text_primary"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:textColor="@android:color/black"
+        android:text="Total fare:"
+        android:textStyle="bold"
+        android:layout_marginTop="40dp"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentTop="true" />
+
+    <Button
+        android:id="@+id/button_confirm"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_gravity="bottom"
+        android:background="@drawable/button_primary"
+        android:text="Confirm"
+        android:textColor="@android:color/white"
+        android:textSize="13sp" />
+
+    <Button
+        android:id="@+id/button_cancel"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:layout_above="@id/button_confirm"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_gravity="bottom"
+        android:background="@drawable/button_empty"
+        android:text="Cancel ride"
+        android:textColor="@android:color/black"
+        android:textSize="13sp" />
+
+    <TextView
+        android:id="@+id/text_charge_passenger"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/button_cancel"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="40dp"
+        android:textSize="13sp"
+        android:textColor="@android:color/black"
+        android:gravity="center"
+        android:text="Should we charge your passenger for this ride?"
+        android:layout_centerInParent="true"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/text_primary"
+        android:layout_above="@id/text_charge_passenger">
+
+        <TextView
+            android:id="@+id/text_total_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:textColor="@color/colorAccent"
+            android:textSize="130sp"
+            android:text="0"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@id/text_total_price"
+            android:textColor="@color/colorAccent"
+            android:textSize="50sp"
+            android:text="$"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@android:color/white"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true">
+
+    <TextView
+        android:id="@+id/text_primary"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:textColor="@android:color/black"
+        android:text="Add a new payment method"
+        android:textStyle="bold"
+        android:layout_marginTop="40dp"
+        android:layout_marginBottom="40dp"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentTop="true" />
+
+
+    <Button
+        android:id="@+id/button_next"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_gravity="bottom"
+        android:background="@drawable/button_primary"
+        android:text="Next"
+        android:textColor="@android:color/white"
+        android:textSize="13sp"
+        android:stateListAnimator="@null"/>
+
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/button_next"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="20dp"
+        android:src="@drawable/powered_by_stripe"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@+id/button_next"
+        android:layout_below="@id/text_primary"
+        android:padding="5dp"
+        android:layout_centerHorizontal="true">
+
+        <com.stripe.android.view.CardInputWidget
+            android:id="@+id/card_input_widget"
+            android:layout_width="340dp"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/loading_screen"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/white"
+        android:visibility="gone">
+
+        <ProgressBar
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_centerInParent="true"/>
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@android:color/white"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true">
+
+    <TextView
+        android:id="@+id/text_primary"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="14sp"
+        android:textColor="@android:color/black"
+        android:text="Loading..."
+        android:textStyle="bold"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentTop="true" />
+
+    <TextView
+        android:id="@+id/divider"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:layout_below="@id/text_primary"
+        android:background="@android:color/darker_gray"/>
+
+    <LinearLayout
+        android:id="@+id/layout_actions"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_below="@id/divider"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+        <RelativeLayout
+            android:id="@+id/button_call"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/text_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="30dp"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:textColor="@android:color/black"
+                android:text="Loading..."
+                android:textSize="12sp"/>
+
+            <ImageView
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_toLeftOf="@id/text_number"
+                android:layout_marginRight="10dp"
+                android:layout_centerVertical="true"
+                android:src="@drawable/call_icon"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/button_cancel"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <ImageView
+                android:id="@+id/x_icon"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_marginLeft="30dp"
+                android:layout_centerVertical="true"
+                android:layout_alignParentLeft="true"
+                android:src="@drawable/x_icon"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@id/x_icon"
+                android:textColor="@android:color/black"
+                android:text="Cancel ride"
+                android:textSize="12sp"/>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <fragment
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/layout_actions"
+        tools:context="com.emelianov.deepthought.partykart.MapsActivity" />
+
+    <ProgressBar
+        android:id="@+id/loading"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_centerInParent="true"/>
+
+</RelativeLayout>

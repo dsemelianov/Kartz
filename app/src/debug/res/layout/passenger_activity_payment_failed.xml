@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@android:color/white"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true">
+
+    <TextView
+        android:id="@+id/text_primary"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:textColor="@android:color/black"
+        android:text="Uh oh!"
+        android:textStyle="bold"
+        android:layout_marginTop="40dp"
+        android:layout_marginBottom="40dp"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentTop="true" />
+
+    <Button
+        android:id="@+id/button_different_card"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_gravity="bottom"
+        android:background="@drawable/button_empty"
+        android:text="Use a different card"
+        android:textColor="@android:color/black"
+        android:textSize="13sp"
+        android:stateListAnimator="@null"/>
+
+
+    <Button
+        android:id="@+id/button_try_again"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:layout_above="@id/button_different_card"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_gravity="bottom"
+        android:background="@drawable/button_empty"
+        android:text="Try again"
+        android:textColor="@android:color/black"
+        android:textSize="13sp"
+        android:stateListAnimator="@null"/>
+
+
+    <TextView
+        android:id="@+id/text_secondary"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/button_try_again"
+        android:layout_below="@id/text_primary"
+        android:textSize="13sp"
+        android:textColor="@android:color/black"
+        android:gravity="center"
+        android:text="A payment on your card didn't go through!"
+        android:layout_centerInParent="true"/>
+
+
+    <RelativeLayout
+        android:id="@+id/loading_screen"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/white">
+
+        <ProgressBar
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_centerInParent="true"/>
+    </RelativeLayout>
+
+</RelativeLayout>

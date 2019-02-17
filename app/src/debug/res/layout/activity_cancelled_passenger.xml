@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@android:color/white"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true">
+
+    <TextView
+        android:id="@+id/text_primary"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:textColor="@android:color/black"
+        android:text="Request cancelled"
+        android:textStyle="bold"
+        android:layout_marginTop="40dp"
+        android:layout_marginBottom="40dp"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentTop="true" />
+
+    <Button
+        android:id="@+id/button_report"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_gravity="bottom"
+        android:background="@drawable/button_empty"
+        android:text="Report an issue"
+        android:textColor="@android:color/black"
+        android:textSize="13sp" />
+
+    <Button
+        android:id="@+id/button_finish"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:layout_above="@id/button_report"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_gravity="bottom"
+        android:background="@drawable/button_primary"
+        android:text="Look for more rides"
+        android:textColor="@android:color/white"
+        android:textSize="13sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:layout_below="@id/text_primary"
+        android:layout_above="@id/button_finish"
+        android:gravity="center"
+        android:textSize="12sp"
+        android:textColor="@android:color/black"
+        android:layout_margin="20dp"
+        android:text="Your passenger cancelled the ride. Sorry about that!"
+        android:layout_centerInParent="true"/>
+
+
+</RelativeLayout>

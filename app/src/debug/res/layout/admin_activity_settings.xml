@@ -1,0 +1,317 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@android:color/white"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true">
+
+    <RelativeLayout
+        android:id="@+id/footer"
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:layout_alignParentBottom="true">
+
+        <Button
+            android:id="@+id/button_save"
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_gravity="bottom"
+            android:background="@drawable/button_primary"
+            android:text="Save"
+            android:textColor="@android:color/white"
+            android:textSize="13sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@android:color/black"
+            android:layout_alignParentTop="true"/>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/footer"
+        android:orientation="vertical"
+        android:weightSum="3">
+
+        <RelativeLayout
+            android:id="@+id/layout_price_per_passenger"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/text_price_per_passenger"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_margin="10dp"
+                android:textSize="15sp"
+                android:textColor="@android:color/black"
+                android:text="Price per passenger"/>
+
+            <LinearLayout
+                android:id="@+id/layout_number_price_per_passenger"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/text_price_per_passenger"
+                android:orientation="horizontal"
+                android:weightSum="5">
+
+                <RelativeLayout
+                    android:id="@+id/button_minus_price_per_passenger"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <ImageView
+                        android:id="@+id/icon_minus_price_per_passenger"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:src="@drawable/minus"
+                        android:layout_centerInParent="true"/>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3">
+
+                    <TextView
+                        android:id="@+id/text_number_price_per_passenger"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="70sp"
+                        android:gravity="center"
+                        android:text="0"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toLeftOf="@id/text_number_price_per_passenger"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="30sp"
+                        android:text="$"/>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/button_plus_price_per_passenger"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <ImageView
+                        android:id="@+id/icon_plus_price_per_passenger"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:src="@drawable/plus"
+                        android:layout_centerInParent="true"/>
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@android:color/black"
+                android:layout_alignParentBottom="true"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/layout_minimum_price"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/text_minimum_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_margin="10dp"
+                android:textSize="15sp"
+                android:textColor="@android:color/black"
+                android:text="Minimum price"/>
+
+            <LinearLayout
+                android:id="@+id/layout_number_minimum_price"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/text_minimum_price"
+                android:orientation="horizontal"
+                android:weightSum="5">
+
+                <RelativeLayout
+                    android:id="@+id/button_minus_minimum_price"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <ImageView
+                        android:id="@+id/icon_minus_minimum_price"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:src="@drawable/minus"
+                        android:layout_centerInParent="true"/>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3">
+
+                    <TextView
+                        android:id="@+id/text_number_minimum_price"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="70sp"
+                        android:gravity="center"
+                        android:text="0"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toLeftOf="@id/text_number_minimum_price"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="30sp"
+                        android:text="$"/>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/button_plus_minimum_price"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <ImageView
+                        android:id="@+id/icon_plus_minimum_price"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:src="@drawable/plus"
+                        android:layout_centerInParent="true"/>
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@android:color/black"
+                android:layout_alignParentBottom="true"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/layout_passenger_limit"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/text_passenger_limit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_margin="10dp"
+                android:textSize="15sp"
+                android:textColor="@android:color/black"
+                android:text="Passenger limit"/>
+
+            <LinearLayout
+                android:id="@+id/layout_number_passenger_limit"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/text_passenger_limit"
+                android:orientation="horizontal"
+                android:weightSum="5">
+
+                <RelativeLayout
+                    android:id="@+id/button_minus_passenger_limit"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <ImageView
+                        android:id="@+id/icon_minus_passenger_limit"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:src="@drawable/minus"
+                        android:layout_centerInParent="true"/>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3">
+
+                    <TextView
+                        android:id="@+id/text_number_passenger_limit"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:text="0"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="70sp"
+                        android:gravity="center"/>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/button_plus_passenger_limit"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <ImageView
+                        android:id="@+id/icon_plus_passenger_limit"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:src="@drawable/plus"
+                        android:layout_centerInParent="true"/>
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/loading_screen"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/white">
+
+        <ProgressBar
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_centerInParent="true"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>

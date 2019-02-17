@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary">
+
+    <ImageView
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="40dp"
+        android:src="@drawable/logo"
+        android:layout_centerInParent="true"/>
+
+    <!--<ImageView
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/background_image"
+        android:scaleType="centerCrop"/>-->
+
+    <Button
+        android:id="@+id/button_sign_in"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/button_empty"
+        android:text="Get started"
+        android:textColor="@android:color/black"
+        android:textSize="13sp" />
+
+    <TextView
+        android:id="@+id/label_terms"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_above="@id/button_sign_in"
+        android:gravity="center"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:text="By creating an account, you agree to our terms and conditions"
+        android:textColor="@android:color/white"
+        android:textSize="12sp" />
+
+</RelativeLayout>

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/colorPrimary"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true">
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="300dp"
+        android:layout_centerInParent="true">
+
+        <TextView
+            android:id="@+id/text_phone_number_label"
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:text="Your name:"
+            android:textSize="20sp"
+            android:textColor="#FFFFFF"
+            android:gravity="center"
+            android:layout_alignParentTop="true"
+            android:layout_marginBottom="10dp"/>
+
+        <RelativeLayout
+            android:id="@+id/edit_text_layout"
+            android:layout_below="@id/text_phone_number_label"
+            android:layout_width="fill_parent"
+            android:layout_height="150dp">
+
+            <ImageView
+                android:id="@+id/search_box_image"
+                android:layout_width="250dp"
+                android:layout_height="130dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:adjustViewBounds="true"
+                android:src="@drawable/type_box"
+                android:layout_centerInParent="true"/>
+
+            <EditText
+                android:id="@+id/name_field"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:inputType="textPersonName"
+                android:layout_alignBottom="@id/search_box_image"
+                android:layout_alignTop="@id/search_box_image"
+                android:layout_alignLeft="@id/search_box_image"
+                android:layout_alignRight="@id/search_box_image"
+                android:textColor="#000000"
+                android:textColorHint="#000000"
+                android:background="#00000000"
+                android:textSize="15sp"
+                android:gravity="center"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/continue_layout"
+            android:layout_below="@id/edit_text_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="100dp">
+
+            <ImageView
+                android:id="@+id/continue_button"
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                android:adjustViewBounds="true"
+                android:src="@drawable/continue_button"
+                android:layout_centerInParent="true"/>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+
+</RelativeLayout>
